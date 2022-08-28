@@ -1,0 +1,30 @@
+{
+    "development":{
+        "host": "localhost",
+        "username": "root",
+        "password": null,
+        "storage": "../DB/lostpets.sqlite",
+        "dialect":  "sqlite",
+        "operatorsAliases": false,
+        "define": {
+            "timestamps": true,
+            "underscored": true,
+            "underscoredAll": true
+        }
+    },
+
+    "test":{
+        "host": "localhost",
+        "username": "root",
+        "password": null,
+        "storege": "../DB/lostpets_test.sqlite",
+        "dialect":  "sqlite",
+        "operatorsAliases": false,
+        "define": {
+            "timestamps": true,
+            "underscored": true,
+            "underscoredAll": true
+        }
+    }
+
+}
