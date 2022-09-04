@@ -6,7 +6,9 @@
   "scripts": {
     "run": "node src/app.js",
     "dev": "nodemon src/app.js --ignore __test__",
-    "test": "jest"
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +20,12 @@
     "sqlite3": "^5.0.11"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.18.10",
+    "babel-plugin-rewire": "1.0.0-beta-5",
+    "babel-jest": "18.0.0",
     "nodemon": "^2.0.19",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+    "supertest": "^6.2.4"
   }
 }

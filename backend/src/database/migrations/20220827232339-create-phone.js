@@ -4,14 +4,20 @@ module.exports = {
   async up (queryInterface, Sequelize) {
 
     await queryInterface.createTable('telefone', { 
-        cod_ddd: {
+        
+        Num_idenf_tel: { 
           type: Sequelize.INTEGER,
           primaryKey: true,
+          autoIncrement: true,
+          allowNull:false
+        },
+      
+        cod_ddd: {
+          type: Sequelize.INTEGER(2),
           allowNull: false
         },
         num_telefone: {
-          type: Sequelize.INTEGER,
-          primaryKey: true,
+          type: Sequelize.INTEGER(9),
           allowNull: false
         },
         created_at: {

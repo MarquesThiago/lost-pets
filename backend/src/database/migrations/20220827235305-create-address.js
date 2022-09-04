@@ -27,7 +27,7 @@ module.exports = {
             allowNull: false
         },
         codigo_UF : {
-            type: Sequelize.CHAR,
+            type: Sequelize.CHAR(2),
             allowNull: false
         }
       })

@@ -10,8 +10,8 @@ class ServerRunner{
 
     }
 
-    middleware = () => {
-        this.express.use(this.#dependencie.json())
+    middleware = (typeRequest = this.#dependencie.json) => {
+        this.express.use(typeRequest())
 
     }
 
